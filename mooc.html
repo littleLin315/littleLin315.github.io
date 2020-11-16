@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国大学MOOC(慕课)国家精品课程</title>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<script src="js/move.js"></script>
+	<script>
+		window.onload=function(){
+			var aClient=document.getElementById('client-side');
+			var aEnter=document.getElementById('enter');
+			var aLogin=document.getElementById('login');
+			
+			// 扫码登陆
+			var saoMa=document.getElementById('saoMa');
+			var timer=null;
+			saoMa.onmouseover=aClient.onmouseover=function(){
+				saoMa.style.display='block';
+				clearInterval(timer);
+			}    
+			saoMa.onmouseout=aClient.onmouseout=function(){
+			  timer=setInterval(function(){
+				saoMa.style.display='none'; 
+			   },200);
+		    } 
+			  
+			// 字体变色
+			aEnter.onmouseover=aLogin.onmouseover=function(){
+				aEnter.style.color=aLogin.style.color='#55b829';
+			}
+			aEnter.onmouseout=aLogin.onmouseout=function(){
+				aEnter.style.color=aLogin.style.color='';
+			}
+			
+			//更多课程频道
+			var more=document.getElementById('more');
+			var more1=document.getElementById('more1');
+			var timer1=null;
+			more.onmouseover=more1.onmouseover=function(){
+				more1.style.display='block';
+				clearInterval(timer1);
+			}
+			more.onmouseout=more1.onmouseout=function(){
+				timer1=setInterval(function(){
+					more1.style.display='none';
+				},200);
+			}
+			
+			// 竖幅上的事件
+			var advice=document.getElementById('advice');
+			var advice1=document.getElementById('advice1');
+			var lesson=document.getElementById('lesson');
+			var lesson1=document.getElementById('lesson1');
+			advice.onmouseenter=advice1.onmouseenter=function(){
+				advice1.style.display='block';
+			}
+			lesson.onmouseenter=lesson1.onmouseenter=function(){
+				lesson1.style.display='block';
+			}
+			advice.onmouseleave=advice1.onmouseleave=function(){
+				advice1.style.display='none';
+			}
+			lesson.onmouseleave=lesson1.onmouseleave=function(){
+				lesson1.style.display='none';
+			}
+			
+			// signWord
+			var signWord=document.getElementById('signWord');
+			var sign=document.getElementById('sign');
+			
+			var aSignP=document.getElementById('signWordSpan1');
+			var aSignSpan=document.getElementById('signWordSpan2');
+			sign.onmouseenter=signWord.onmouseenter=function(){
+				signWord.style.display='block';
+				clearInterval(signDiv);
+			}
+			sign.onmouseleave=signWord.onmouseleave=function(){
+				signDiv=setInterval(function(){
+					signWord.style.display='none';
+				},200);
+			}
+			
+			//轮播图
+			
+			
+			
+			
+			
+			
+		
+			
+			// 滚动事件
+			// window.scroll=function(){
+			// 	var turnBack=document.getElementById('turnBack');
+			// 	var fixed=document.getElementById('fixed');
+			// 	turnBack.style.display='block';
+			// }
+		}
+	</script>
+	<body>
+		<div id="header">
+			<a href="#"><img id="logo" src="img/logo.png"></a>
+			
+			<div id="search">
+				<input type="text" placeholder="搜索感兴趣的课程" />
+				<img src="img/search.png" />
+			</div>
+			
+			<div id="client">
+				<img src="img/客户端.png" style="width: 14px; height: 24px;">
+				<a href="#"><p id="client-side">客户端</p></a>
+				<div id="saoMa" ></div>
+			</div>
+			
+			<div id="register">
+				<a href="#"><p id="enter">登录</p></a>
+				<a href="#"><p id="login">注册</p></a>
+				<p id="p3">|</p>
+			</div>
+			<ul id="navigation">
+				<a href="#"><li>课程</li></a>
+				<a href="#"><li>名校</li></a>
+				<a href="#"><li>2020考研</li></a>
+				<a href="#"><li>2021考研</li></a>
+				<a href="#"><li>学校云</li></a>
+				<a href="#"><li>名师专栏</li></a>
+			</ul>
+			<ul id="navigation2">
+				<a href="#"><li>有道精品课</li></a>
+				<a href="#"><li>网易云课堂</li></a>
+				<a href="#"><li id="more">更多课程频道</li></a>
+				<ul id="more1">
+					<a href="#"><li><p>大学先修课</p></li></a>
+					<a href="#"><li><p>职业教育课程</p></li></a>
+					<a href="#"><li><p>教师系列MOOC</p></li></a>
+				</ul>
+			</ul>
+		</div>
+		
+		<div id="main">
+			<div id="lunBo">
+				<!-- 轮播图 -->
+				<ul id="pic">
+					<li><img src="img1/1.png"></li>
+					<li><img src="img1/2.png"></li>
+					<li><img src="img1/3.png"></li>
+					<li><img src="img1/4.png"></li>
+					<li><img src="img1/5.png"></li>
+					<li><img src="img1/6<strong></strong>.png"></li>
+				</ul>
+				
+				<!-- 菜单 -->
+				<ul id="menu">
+					<a href="#"><li><p>计算机</p></li></a>
+					<a href="#"><li><p>经济学</p></li></a>
+					<a href="#"><li><p>管理</p></li></a>
+					<a href="#"><li><p>考研</p></li></a>
+					<a href="#"><li><p>理工补习</p></li></a>
+					<a href="#"><li><p>四六级</p></li></a>
+					<a href="#"><li><p>实用英语</p></li></a>
+					<a href="#"><li><p>外语</p></li></a>
+					<a href="#"><li onmouseover="lunBo.style.overflow='visible'; more2.innerHTML='心理学'" 
+					onmouseout="lunBo.style.overflow='hidden'; more2.innerHTML='更多'"><p id="more2">更多</p></li></a>
+					
+					<!-- 隐藏部分 -->
+					<div id="hidden"onmouseover="lunBo.style.overflow='visible';more2.innerHTML='心理学'"
+					onmouseout="lunBo.style.overflow='hidden';more2.innerHTML='更多'" >
+					<a href="#"><li><p>文学文化</p></li></a>
+					<a href="#"><li><p>艺术设计</p></li></a>
+					<a href="#"><li><p>历史</p></li></a>
+					<a href="#"><li><p>哲学</p></li></a>
+					<a href="#"><li><p>法学</p></li></a>
+					<a href="#"><li><p>工学</p></li></a>
+					<a href="#"><li><p>理学</p></li></a>
+					<a href="#"><li><p>医药卫生</p></li></a>
+					<a href="#"><li><p>农林园艺</p></li></a>
+					<a href="#"><li><p>教育教学</p></li></a>
+					</div>
+				</ul>
+				
+				<!-- 登录框 -->
+				<div id="goin">
+					<span>免费学习名校名师的精品课程</span>
+					<img src="image/登录.png" />
+					<div id="button"><span>登录</span></div>
+					<p>网易和高等教育出版社出品</p>
+				</div>
+			</div>
+			<!-- 参与大学 -->
+			<div id="colleges">
+				<a href="#"><p>全部521所合作高校</p></a>
+				<a href="#"><img src="img/北京大学.png" alt=""></a>
+				<a href="#"><img src="img/浙江大学.png" alt=""></a>
+				<a href="#"><img src="img/南京大学.png" alt=""></a>
+				<a href="#"><img src="img/武汉大学.png" alt=""></a>
+				<a href="#"><img src="img/哈工大.png" alt=""></a>
+			</div>
+		</div>
+		<div id="fixed">
+			<a href="#"><img id="shuFu" src="image/竖幅.png"></a>
+			<a href="#"><div id="sign">
+			   <p>签到</p>
+			   
+			</div></a>
+			<div id="signWord">
+				   <span id="signWordSpan1">慕课君邀请你一起签到</span>
+				   <span id="signWordSpan2">坚持因为不止是对知识的渴望，还为了那个努力的自己。</span>
+			   </div>
+			<a href="#"><div id="advice"><img src="image/意见反馈.png"></div></a>
+			<a href="#"><div id="advice1"><p style="width: 28px;height: 28px;padding: 3px 7px;font-size: 14px;color: #FFFFFF;">反馈意见</p></div></a>
+			<a href="#"><div id="lesson"><img src="image/手机课堂.png"></div></a>
+			<a href="#"><div id="lesson1"><p style="width: 28px;height: 28px;padding: 3px 7px;font-size: 14px;color: #FFFFFF;">手机课堂</p></div></a>
+			<a href="#"><div id="turnBack"><img src="image/返回顶部.png"></div></a>
+		</div>
+	</body>
+</html>
