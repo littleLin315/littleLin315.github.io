@@ -11,6 +11,7 @@
            var oNav=document.getElementById('nav');
            var aNav=oNav.getElementsByTagName('li');
 		   var oChildFrame=document.getElementById('childFrame');
+		   var oLogo=document.getElementById('logo')
 
            for(var i=0;i<aNav.length;i++)
            {
@@ -27,6 +28,10 @@
                }
 			   aNav[i].onclick=function(){
 				   startMove(oChildFrame,{'top':-768*this.index})
+			   }
+			   oLogo.onclick=function()
+			   {
+				   startMove(oChildFrame,{'top':0})
 			   }
            }
        }
