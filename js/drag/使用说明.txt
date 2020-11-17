@@ -1,0 +1,10 @@
+声明：此源代码为解决浏览器中对象的拖动而生！   
+
+     为解决部分浏览器兼容问题，源代中使用了此类形式：
+           var x=function（ev）{
+                var oEvent=ev||event;    
+           }
+      故在调用此源代码是必须使用一下形式：
+           oDiv.onmousedown=function(ev){		
+	 drag(ev,obj);
+           }

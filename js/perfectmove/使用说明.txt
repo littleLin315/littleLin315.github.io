@@ -1,0 +1,5 @@
+声明：此源代码为解决对象运动而生，基本上可以兼容目前的所有样式选择！
+       源代码中所调用函数:
+           staetMove(obj,json,fnEnd);
+       其中json中所包含内容应为所需要设置的样式，如staetMove(obj,{width:···,height:···},fnEnd)；
+       fnEnd代表函数，用于链式运动，即在一个运动结束后立即开始另一个运动。

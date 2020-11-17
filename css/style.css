@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 1024px;
+    height: auto;
+    margin: auto;
+}
+#parentFrame{
+    width: 1024px;
+    height: 768px;
+    top: 68px;
+    position: relative; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+#childFrame{
+    width: 1024px;
+    height: auto;
+    top: 0px;
+    position: absolute;
+}
+
+#header{
+    width: 1024px;
+    height: 68px;
+    position: fixed;
+    background: lightslategrey; 
+    top: 0;
+       
+}
+#logo{
+    position: absolute;
+    width: 150px;
+    height: 62px;
+    top: 5px;
+    text-align: center;
+    background: lightslategrey;
+}
+#nav{
+    position: absolute;
+    width: 700px;
+    height: 68px;
+    left: 320px;
+    background: lightslategrey;
+    list-style: none;
+}
+#nav li{
+    width: 115px;
+    height: 40px;
+    padding: 11px;
+    float: left;
+    margin-left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: wheat;
+    border: 3px solid lightpink;
+    border-radius: 10px;
+}
+#scrollPic{
+    width: 1024px;
+    height: 700px;
+    position: absolute;
+    top: 0px;
+    background: lightsteelblue;
+}
+#pic{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    background: lightyellow;
+    list-style: none;
+}
+#pic>li{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+}
+
+
+#introduce{
+    width: 1024px;
+    height: 700px;
+    position: absolute;
+    top: 768px;
+    background: lightseagreen;
+}
+
+#act{
+    width: 1024px;
+    height: 700px;
+    position: absolute;
+    top: 1536px;
+    background: limegreen;
+}
+
+#competition{
+    width: 1024px;
+    height: 700px;
+    position: absolute;
+    top: 2304px;
+    background: mediumslateblue;
+}

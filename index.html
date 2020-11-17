@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>学生开放实验室</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<script src="js/perfectmove/perfectmove.js"></script>
+ <script src="js/scrollEvent/scrollEvent.js"></script>
+    <script>
+       window.onload=function(){
+           var oNav=document.getElementById('nav');
+           var aNav=oNav.getElementsByTagName('li');
+		   var oChildFrame=document.getElementById('childFrame');
+
+           for(var i=0;i<aNav.length;i++)
+           {
+
+			   aNav[i].index=i;
+
+               aNav[i].onmouseover=function()
+               {
+                   this.style.background='yellow';
+               }
+               aNav[i].onmouseout=function()
+               {
+                   this.style.background='lightslategrey';
+               }
+			   aNav[i].onclick=function(){
+				   startMove(oChildFrame,{'top':-768*this.index})
+			   }
+           }
+       }
+	
+		
+	</script>
+<body>
+	 <!-- 标题导航栏 -->
+    <div id="header">
+         <div id="logo">
+             <a href="#"><img src="img/logo.png" ></a>
+         </div>
+         <ul id="nav">
+             <a href="#"><li>首页</li></a>
+             <a href="#"><li>部门介绍</li></a>
+             <a href="#"><li>部门团建</li></a>
+             <a href="#"><li>学科竞赛</li></a>
+         </ul>
+	</div>
+	
+<div id="parentFrame">
+
+  <div id="childFrame">	
+	<!-- //轮播图部分 -->
+    <div id="scrollPic">
+       <ul id="pic">
+		   <li></li>
+		   <li></li>
+		   <li></li>
+		   <li></li>
+	   </ul>
+	</div>
+	
+	<!-- //部门介绍部分 -->
+	<div id="introduce">
+       
+	</div>
+
+	<!-- //部门团建 -->
+	<div id="act">
+		
+	</div>
+
+	<!-- //学科竞赛 -->
+	<div id="competition">
+		
+	</div>
+
+
+  </div>
+
+	
+</div>
+</body>
+</html>
